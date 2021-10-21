@@ -1,130 +1,130 @@
 [
   {
     "id": 0,
-    "lotName": "Alpha",
-    "picture": "images/spot1.png",
+    "name": "Lot 1, Spot 1",
+    "picture": "images/spot1.jpg",
     "price": 2,
-    "address": "1 King Street",
-    "markedNumber": 1
+    "availability": "All Day",
+    "location": "1 King Street"
   },
   {
     "id": 1,
-    "lotName": "Alpha",
-    "picture": "images/spot2.png",
+    "name": "Lot 1, Spot 2",
+    "picture": "images/spot2.jpg",
     "price": 2,
-    "address": "1 King Street",
-    "markedNumber": 2
+    "availability": "All Day",
+    "location": "1 King Street"
   },
   {
     "id": 2,
-    "lotName": "Alpha",
-    "picture": "images/spot3.png",
+    "name": "Lot 1, Spot 3",
+    "picture": "images/spot3.jpg",
     "price": 2,
-    "address": "1 King Street",
-    "markedNumber": 3
+    "availability": "All Day",
+    "location": "1 King Street"
   },
   {
     "id": 3,
-    "lotName": "Alpha",
-    "picture": "images/spot4.png",
+    "name": "Lot 1, Spot 4",
+    "picture": "images/spot4.jpg",
     "price": 2,
-    "address": "1 King Street",
-    "markedNumber": 4
+    "availability": "All Day",
+    "location": "1 King Street"
   },
   {
     "id": 4,
-    "lotName": "Alpha",
-    "picture": "images/spot5.png",
+    "name": "Lot 1, Spot 5",
+    "picture": "images/spot5.jpg",
     "price": 2,
-    "address": "1 King Street",
-    "markedNumber": 5
+    "availability": "All Day",
+    "location": "1 King Street"
   },
   {
     "id": 5,
-    "lotName": "Alpha",
-    "picture": "images/spot6.png",
+    "name": "Lot 1, Spot 6",
+    "picture": "images/spot6.jpg",
     "price": 2,
-    "address": "1 King Street",
-    "markedNumber": 6
+    "availability": "All Day",
+    "location": "1 King Street"
   },
   {
     "id": 6,
-    "lotName": "Alpha",
-    "picture": "images/spot7.png",
+    "name": "Lot 1, Spot 7",
+    "picture": "images/spot7.jpg",
     "price": 2,
-    "address": "1 King Street",
-    "markedNumber": 7
+    "availability": "All Day",
+    "location": "1 King Street"
   },
   {
     "id": 7,
-    "lotName": "Alpha",
-    "picture": "images/spot8.png",
+    "name": "Lot 1, Spot 8",
+    "picture": "images/spot8.jpg",
     "price": 2,
-    "address": "1 King Street",
-    "markedNumber": 8
+    "availability": "All Day",
+    "location": "1 King Street"
   },
   {
     "id": 8,
-    "lotName": "Alpha",
-    "picture": "images/spot9.png",
+    "name": "Lot 1, Spot 9",
+    "picture": "images/spot9.jpg",
     "price": 2,
-    "address": "1 King Street",
-    "markedNumber": 9
+    "availability": "All Day",
+    "location": "1 King Street"
   },
   {
     "id": 9,
-    "lotName": "Alpha",
-    "picture": "images/spot10.png",
+    "name": "Lot 1, Spot 10",
+    "picture": "images/spot10.jpg",
     "price": 2,
-    "address": "1 King Street",
-    "markedNumber": 10
+    "availability": "All Day",
+    "location": "1 King Street"
   },
   {
     "id": 10,
-    "lotName": "Alpha",
-    "picture": "images/spot11.png",
+    "name": "Lot 1, Spot 11",
+    "picture": "images/spot11.jpg",
     "price": 2,
-    "address": "1 King Street",
-    "markedNumber": 11
+    "availability": "All Day",
+    "location": "1 King Street"
   },
   {
     "id": 11,
-    "lotName": "Alpha",
-    "picture": "images/spot12.png",
+    "name": "Lot 1, Spot 12",
+    "picture": "images/spot12.jpg",
     "price": 2,
-    "address": "1 King Street",
-    "markedNumber": 12
+    "availability": "All Day",
+    "location": "1 King Street"
   },
   {
     "id": 12,
-    "lotName": "Alpha",
-    "picture": "images/spot13.png",
+    "name": "Lot 1, Spot 13",
+    "picture": "images/spot13.jpg",
     "price": 2,
-    "address": "1 King Street",
-    "markedNumber": 13
+    "availability": "All Day",
+    "location": "1 King Street"
   },
   {
     "id": 13,
-    "lotName": "Alpha",
-    "picture": "images/spot14.png",
+    "name": "Lot 1, Spot 14",
+    "picture": "images/spot14.jpg",
     "price": 2,
-    "address": "1 King Street",
-    "markedNumber": 14
+    "availability": "All Day",
+    "location": "1 King Street"
   },
   {
     "id": 14,
-    "lotName": "Alpha",
-    "picture": "images/spot15.png",
+    "name": "Lot 1, Spot 15",
+    "picture": "images/spot15.jpg",
     "price": 2,
-    "address": "1 King Street",
-    "markedNumber": 15
+    "availability": "All Day",
+    "location": "1 King Street"
   },
   {
-    "id": 15  ,
-    "lotName": "Alpha",
-    "picture": "images/spot16.png",
+    "id": 15,
+    "name": "Lot 1, Spot 16",
+    "picture": "images/spot16.jpg",
     "price": 2,
-    "address": "1 King Street",
-    "markedNumber": 16
+    "availability": "All Day",
+    "location": "1 King Street"
   }
 ]
