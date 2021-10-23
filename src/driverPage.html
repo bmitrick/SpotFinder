@@ -13,33 +13,6 @@
     <h1 class="text-center">SpotFinder</h1>
     <br/>
 
-
-    <h2>Driver Login</h2>
-    <form class="driver-login" id="driver-login">
-      <label>Email:</label>
-      <input name="driver-email" id="driver-email" placeholder="Email"/>
-      </br>
-      <label>Password:</label>
-      <input name="driver-password" id="driver-password" placeholder="Password"/>
-      </br>
-      <input name="Login" type="submit" class="driver-login-submit">
-      <input name="Register" type="submit" class="driver-register-submit">
-    </form>
-
-    <h2>Property Owner Login</h2>
-    <form class="property-owner-login" id="property-owner-login">
-      <label>Email:</label>
-      <input name="property-owner-email" id="property-owner-email" placeholder="Email"/>
-      </br>
-      <label>Password:</label>
-      <input name="property-owner-password" id="property-owner-password" placeholder="Password"/>
-      </br>
-      <button type="button" class="btn-property-owner-login" onclick="window.location.href=propertyOwnerPage.html">Login</button>
-      <button type="button" class="btn-property-owner-register">Register</button>
-    </form>
-
-
-    <div class ="hidden-content" style="display: none;">
     <div id="spotsRow" class="row">
         <!-- Spots are put in here by init function in JS  -->
     </div>
@@ -59,7 +32,6 @@
         </div>
     </div>
     </div>
-  </div>
 
     <script src="js/web3.min.js"></script>
     <script src="js/truffle-contract.js"></script>
