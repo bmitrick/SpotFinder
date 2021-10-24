@@ -65,7 +65,7 @@
   "sourceMap": "27:361:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:361:1;;;;;;;",
   "deployedSourceMap": "27:361:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:361:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;295:90;;;:::i;:::-;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;295:90:1;;;;;;;;;;;;;;;;99:162;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;99:162:1;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;46:26;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;46:26:1;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;295:90;338:18;;:::i;:::-;372:7;365:14;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;295:90;:::o;99:162::-;146:4;178:1;168:6;:11;;:27;;;;;193:2;183:6;:12;;168:27;159:37;;;;;;223:10;205:7;213:6;205:15;;;;;;;;;:28;;;;;;;;;;;;;;;;;;249:6;242:13;;99:162;;;:::o;46:26::-;;;;;;;;;;;;;;;;;;;;;;;:::o;27:361::-;;;;;;;;;;;29:2:-1;21:6;17:15;117:4;105:10;97:6;88:34;148:4;140:6;136:17;126:27;;0:157;27:361:1;;;;:::o",
   "source": "pragma solidity ^0.5.0;\r\n\r\ncontract Rent {\r\n  address[16] public drivers;\r\n\r\n  //Renting a spot\r\n  function rentSpot(uint spotId) public returns (uint) {\r\n    require (spotId >= 0 && spotId <= 15);\r\n\r\n    drivers[spotId] = msg.sender;\r\n\r\n    return spotId;\r\n  }\r\n\r\n  //Retrieving the drivers\r\n  function getDrivers() public view returns (address[16] memory) {\r\n    return drivers;\r\n  }\r\n}\r\n",
-  "sourcePath": "C:\\Users\\Bmitr\\Documents\\GitHub Based Code\\SpotFinder\\contracts\\Rent.sol",
+  "sourcePath": "C:\\Users\\Bmitr\\Documents\\GitBasedCode\\SpotFinder\\contracts\\Rent.sol",
   "ast": {
     "absolutePath": "project:/contracts/Rent.sol",
     "exportedSymbols": {
@@ -1247,12 +1247,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x6fD636eB02f226fD86dA05498DaD0bEBA14CEdF2",
-      "transactionHash": "0x338ba73ec1cea9a8a0c824a112315d9bac7875eba0e65f6f879ff0cd997bae71"
+      "address": "0x2A60D8f89BE90fFFBcc895A43A654161e8Ce1f52",
+      "transactionHash": "0x6cda3a8cda181085a548f72c59748a549a5f632e6d07c991efd6b44b33b7b8a1"
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-10-21T13:54:47.275Z",
+  "updatedAt": "2021-10-23T20:48:48.392Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

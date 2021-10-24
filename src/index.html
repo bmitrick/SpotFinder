@@ -14,21 +14,36 @@
     <br/>
 
 
+
+
+    <form action="driverPage.html">
+      <input type="submit" value="Go to Drive Landing Page" />
+    </form>
+
+    <form action="propertyOwnerPage.html">
+      <input type="submit" value="Go to Property Owner Landing Page" />
+    </form>
+
+
+    <div style="display: none;">
     <h2>Driver Login</h2>
+
     <form class="driver-login" id="driver-login">
       <label>Email:</label>
-      <input name="driver-email" id="driver-email" placeholder="Email"/>
+      <input type="text" id="driverEmail" placeholder="Email" />
       </br>
       <label>Password:</label>
-      <input name="driver-password" id="driver-password" placeholder="Password"/>
+      <input type="text" id="driverPassword" placeholder="Password" />
       </br>
-      <input name="Login" type="submit" class="driver-login-submit">
-      <input name="Register" type="submit" class="driver-register-submit">
+      <input type="button" id="driverSubmitLogin" value="Login" onclick="loginDriver()" />
+      <input type="button" id="driverRegister" value="Register" onclick="registerDriver()" />
+      </form>
     </form>
+
+
 
     <h2>Property Owner Login</h2>
     <form class="property-owner-login" id="property-owner-login">
-      <label>Email:</label>
       <input name="property-owner-email" id="property-owner-email" placeholder="Email"/>
       </br>
       <label>Password:</label>
@@ -37,7 +52,7 @@
       <button type="button" class="btn-property-owner-login" onclick="window.location.href=propertyOwnerPage.html">Login</button>
       <button type="button" class="btn-property-owner-register">Register</button>
     </form>
-
+    </div>
 
     <div class ="hidden-content" style="display: none;">
     <div id="spotsRow" class="row">
