@@ -48,42 +48,34 @@
     <script src="js/truffle-contract.js"></script>
     <script src="js/app.js"></script>
     <script>
+
       function handleSubmit(event) {
         //Opening spots.json
         const fs = require("fs");
-        let spotsjson = fs.readFileSync("spots.json","utf-8");
+          $.getJSON('../spots.json', function(data){
+            /*Saving spots.json as js array*/
+            let spots = JSON.parse(spotsjson);
 
-        /*Saving spots.json as js array*/
-        let spots = JSON.parse(spotsjson);
+            //Converting form data into JSON entry
+            event.preventDefault();
 
-        //Converting form data into JSON entry
-        event.preventDefault();
+            const data = new FormData(event.target);
 
-        const data = new FormData(event.target);
+            var  id = spots.length();
+            var  name = data.get(name);
+            var  picture = data.get(picture);
+            var  price= data.get(price);
+            var  availability= data.get(availability);
+            var  location= data.get(location);
+    
+            var newSpot= "{id: " + id + ", name: " + name + ", picture: " + picture + ", price: " + price + ", availability: " + availability +", location: " + location + " }";
 
-        var newSpot = {
-          id: spots.length(),
-          name: data.get(name),
-          picture: data.get(picture),
-          price: data.get(price),
-          availability: data.get(availability),
-          location: data.get(location)
+            var spotAsJson = JSON.stringify(newSpot);
+
+            console.log(spotAsJson);
+            //Add new spot to the array of
+          }
         }
-
-        console.log({ newSpot });
-
-        var spotAsJson = JSON.stringify(newSpot);
-
-        console.log(spotAsJson);
-
-
-
-
-
-
-        //Add new spot to the array of
-      }
-
       const form = document.querySelector('form');
       form.addEventListener('submit', handleSubmit);
     </script>
