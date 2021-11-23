@@ -15,69 +15,78 @@
 
     <h2>Property Owner Landing Page</h2>
 
-    <form>
-      <label for="name">Spot Name:</label>
-      <input type="name" name="name" id ="name" placeholder="Spot Name" />
+    <h3>Submit New Spot</h3>
+    <form id="driverLogin" class="form">
+      <label for="spotName">Spot Name</label>
+      <input type="text" name="spotName" id ="spotName">
+      <br>
 
-      </br>
+      <label for="picture">File Path for Photo</label>
+      <input type="text" name="picture" id="picture">
+      <br>
 
-      <label for="picture">Spot Photo:</label>
-      <input type="picture" name="picture" id ="picture" placeholder="Spot Photo" />
+      <label for="price">Price</label>
+      <input type="text" name="price" id="price">
+      <br>
 
-      </br>
+      <label for="availability">Availability</label>
+      <input type="text" name="availability" id="availability">
+      <br>
 
-      <label for="price">Spot Price:</label>
-      <input type="price" name="price" id ="price" placeholder="Spot Price" />
-
-      </br>
-
-      <label for="availability">Spot Availability:</label>
-      <input type="availability" name="availability" id ="availability" placeholder="Spot Availability" />
-
-      </br>
-
-      <label for="location">Spot Location:</label>
-      <input type="location" name="location" id ="location" placeholder="Spot Location" />
-
-
+      <label for="location">Location</label>
+      <input type="text" name="location" id="location">
+      <br>
 
       <button type="submit">Submit</button>
     </form>
 
 
+    <script src="js/web3.min.js"></script>
     <script src="js/truffle-contract.js"></script>
     <script src="js/app.js"></script>
+
     <script>
 
-      function handleSubmit(event) {
-        //Opening spots.json
-        const fs = require("fs");
-          $.getJSON('../spots.json', function(data){
-            /*Saving spots.json as js array*/
-            let spots = JSON.parse(spotsjson);
+      const driverLogin = document.getElementById("driverLogin");
 
-            //Converting form data into JSON entry
-            event.preventDefault();
+      driverLogin.addEventListener("submit", (e) => {
+        e.preventDefault();
 
-            const data = new FormData(event.target);
+        //pulls data from form
+        //console.log("entered spotName is ... " + document.getElementById('spotName').value);
+        var newSpotName = '"' + document.getElementById('spotName').value + '"';
 
-            var  id = spots.length();
-            var  name = data.get(name);
-            var  picture = data.get(picture);
-            var  price= data.get(price);
-            var  availability= data.get(availability);
-            var  location= data.get(location);
-    
-            var newSpot= "{id: " + id + ", name: " + name + ", picture: " + picture + ", price: " + price + ", availability: " + availability +", location: " + location + " }";
+        //console.log("entered picture is ... " + document.getElementById('picture').value);
+        var newSpotPicture = '"' + document.getElementById('picture').value + '"';
 
-            var spotAsJson = JSON.stringify(newSpot);
+        //console.log("entered price is ... " + document.getElementById('price').value);
+        var newSpotPrice = '"' + document.getElementById('price').value + '"';
 
-            console.log(spotAsJson);
-            //Add new spot to the array of
-          }
-        }
-      const form = document.querySelector('form');
-      form.addEventListener('submit', handleSubmit);
+        //console.log("entered availability is ... " + document.getElementById('availability').value);
+        var newSpotAvailability = '"' + document.getElementById('availability').value + '"';
+
+        //console.log("entered location is ... " + document.getElementById('location').value);
+        var newSpotLocation = '"' + document.getElementById('location').value + '"';
+
+        $.getJSON('../spots.json', function(data) {
+          var newIndex = data.length;
+
+          const asJSON = JSON.parse('{"id": '+ newIndex + ', "name":' + newSpotName + ',"picture": '+ newSpotPicture + ',"price": ' + newSpotPrice + ',"availability": ' + newSpotAvailability + ',"location": ' + newSpotLocation + '}');
+
+          //console.log(asJSON);
+
+          data.push(asJSON);
+
+          const fs = require('fs')
+
+
+          console.log(data);
+        });
+
+        console.log("form submitted");
+      });
     </script>
+
+
   </body>
 </html>
