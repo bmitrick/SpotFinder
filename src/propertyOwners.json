@@ -1,0 +1,10 @@
+[
+  {
+    "email":"validPO@email.com",
+    "password" : "password"
+  },
+  {
+    "email":"propertyowner@email.com",
+    "password" : "password"
+  }
+]

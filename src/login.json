@@ -1,0 +1,12 @@
+[
+  {
+    "email":"driver@email.com",
+    "password" : "password",
+    "type" : "driver"
+  },
+  {
+    "email":"owner@email.com",
+    "password" : "password",
+    "type" : "owner"
+  }
+]

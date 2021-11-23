@@ -21,8 +21,8 @@
       <input type="submit" value="Go to Property Owner Landing Page" />
     </form>
 
-    <h2>Driver Login</h2>
-    <form id="driverLogin" class="form">
+    <h2>Login</h2>
+    <form id="login" class="form">
       <label for="email">Email</label>
       <input type="text" name="email" id ="email">
       <label for="password">Password</label>
@@ -31,47 +31,37 @@
     </form>
 
 
-    <div style="display: none;">
-
-    <div class ="hidden-content" style="display: none;">
-    <div id="spotsRow" class="row">
-        <!-- Spots are put in here by init function in JS  -->
-    </div>
-
-    <div id="spotTemplate" style="display: none;">
-      <div class="panel-spot">
-        <div class="panel-heading">
-          <h3 class="panel-title">TEST SPOT TEST SPOT</h3>
-        </div>
-        <div class="panel-body">
-          <img alt="140x140" src="images/dummy.png">
-          <br/><br/>
-          <strong>Availability</strong>: <span class="availability">When is it available?</span><br/>
-          <strong>Price</strong>: $<span class="spot-price">0</span><br/>
-          <strong>Location</strong>: <span class="spot-location">Street Address</span><br/><br/>
-          <button type="button" class="btn-rent" data-id="0">Rent</button>
-        </div>
-    </div>
-    </div>
-  </div>
-
     <script src="js/web3.min.js"></script>
     <script src="js/truffle-contract.js"></script>
     <script src="js/app.js"></script>
 
     <script>
+      const login = document.getElementById("login");
 
-      const driverLogin = document.getElementById("driverLogin");
 
-      driverLogin.addEventListener("submit", (e) => {
+      login.addEventListener("submit", (e) => {
         e.preventDefault();
 
+        $.getJSON('../login.json', function(data) {
+          var isValid = false;
 
-        console.log("entered email is ... " + document.getElementById('email').value);
-        console.log("entered password is ... " + document.getElementById('password').value);
-        console.log("form submitted");
+          for (i = 0; i < data.length; i ++){
+
+            if(data[i].email == document.getElementById('email').value && data[i].password == document.getElementById('password').value){
+              if(data[i].type == "driver"){
+                window.location.replace("driverPage.html");
+              } else {
+                window.location.replace("propertyOwnerPage.html");
+              }
+
+              isValid = true;
+            }
+          }
+
+          if(!isValid) alert("Please enter a valid login to continue.");
+
+        });
       });
-
     </script>
 
 
