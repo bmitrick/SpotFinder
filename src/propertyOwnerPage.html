@@ -52,6 +52,8 @@
       driverLogin.addEventListener("submit", (e) => {
         e.preventDefault();
 
+        var isValid = true;
+
         //pulls data from form
         //console.log("entered spotName is ... " + document.getElementById('spotName').value);
         var newSpotName = '"' + document.getElementById('spotName').value + '"';
@@ -68,18 +70,25 @@
         //console.log("entered location is ... " + document.getElementById('location').value);
         var newSpotLocation = '"' + document.getElementById('location').value + '"';
 
-        $.getJSON('../spots.json', function(data) {
-          var newIndex = data.length;
+        if(newSpotName == '""' || newSpotPicture == '""'  || newSpotPrice == '""'  || newSpotAvailability== '""'   || newSpotLocation == '""' ) isValid = false;
 
-          const asJSON = JSON.parse('{"id": '+ newIndex + ', "name":' + newSpotName + ',"picture": '+ newSpotPicture + ',"price": ' + newSpotPrice + ',"availability": ' + newSpotAvailability + ',"location": ' + newSpotLocation + '}');
+        if (isValid){
+          $.getJSON('../spots.json', function(data) {
+            var newIndex = data.length;
 
-          //console.log(asJSON);
+            const asJSON = JSON.parse('{"id": '+ newIndex + ', "name":' + newSpotName + ',"picture": '+ newSpotPicture + ',"price": ' + newSpotPrice + ',"availability": ' + newSpotAvailability + ',"location": ' + newSpotLocation + '}');
 
-          data.push(asJSON);
+            //console.log(asJSON);
+
+            data.push(asJSON);
 
 
-          console.log(data);
-        });
+            console.log(data);
+          });
+        } else {
+          alert("Please double check data is entered in all fields in order to submit a new parking space.");
+        }
+
 
         console.log("form submitted");
       });
