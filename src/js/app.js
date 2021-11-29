@@ -79,7 +79,7 @@ App = {
     }).then(function(renters) {
       for (i = 0; i < renters.length; i++) {
         if (renters[i] !== '0x0000000000000000000000000000000000000000') {
-          $('.panel-spot').eq(i).find('button').text('Success').attr('disabled', true);
+          $('.panel-spot').eq(i).find('button').text('Rented').attr('disabled', true);
         }
       }
     }).catch(function(err) {
