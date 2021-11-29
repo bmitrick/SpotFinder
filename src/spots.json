@@ -126,13 +126,5 @@
     "price": 2,
     "availability": "All Day",
     "location": "1 King Street"
-  },
-  {
-    "id": 16,
-    "name": "Lot 1, Spot 17",
-    "picture": "images/spot1.jpg",
-    "price": 2,
-    "availability": "All Day",
-    "location": "1 King Street"
   }
 ]

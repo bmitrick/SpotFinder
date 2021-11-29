@@ -31,7 +31,7 @@ contract TestRent {
   //Testing retrevial of all spot renters
   function testGetRenterAddressBySpotIdInArray() public {
     //Store renters in memory rather than contract's storage
-    address[16] memory renters = rent.getDrivers();
+    address[100] memory renters = rent.getDrivers();
 
     Assert.equal(renters[expectedSpotId], expectedRenter, "Owner of the expected spot should be this contract");
   }

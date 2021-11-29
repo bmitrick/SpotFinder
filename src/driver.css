@@ -1,0 +1,112 @@
+* {
+	box-sizing:border-box;
+}
+
+.text-center{
+	color:white;
+}
+
+.page{
+    width: 1100px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+	padding:20px;
+}
+
+header img {
+	width:100px;
+	height:100px;
+	position:relative;
+	float:left;
+
+ }
+
+header h1{
+	position:relative;
+	top:18px;
+	left:-30px;
+	
+}
+
+
+
+header { 
+	color: white; 
+	font-size: 100%; 
+	padding: 5px 20px 20px;
+	padding-bottom:10px;
+	height:125px;
+	text-align: center;
+	
+}
+
+/*h1{
+	position:relative;
+	left:30px;
+}
+*/
+main{
+	color: black;
+	background-color: white; 
+	font-size: 150%; 
+	padding: 20px 20px 20px;
+	border: 2px solid black;
+  	border-radius: 25px;
+	height:auto;
+	text-align: center;
+}
+
+img{
+    height:450px;
+    width:auto;
+}
+
+body {
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-color: gray;
+}
+
+
+
+input[type=submit] {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:2 black;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+	margin-bottom: 20px;
+	float:none;
+   	margin-right:5px;
+	text-align: center;
+}
+
+footer{
+	font-size:18px;
+	background-color:white;
+	bottom:5px;
+	padding:20px;
+	border: 2px solid black;
+  	border-radius: 25px;
+	margin: 0 auto;
+  	text-align: center;
+  	width: 100%;
+  	height: auto;
+	  
+}
+
+@media only screen and (max-width:1024px) {
+	img[alt="parkinglogo"] {
+		left:inherit;
+	 }
+
+    img[alt="140x140"]{
+        height:auto;
+        width: 400px;
+    }
+    
+
+
+}
